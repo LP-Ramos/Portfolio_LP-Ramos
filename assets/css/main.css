@@ -1,0 +1,237 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.main__text{
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.main__text h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-3);
+}
+
+.main__text h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-4);
+}
+
+.main__text__contacts{
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__text__contacts li:not(:nth-child(2)){
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+}
+
+.main__text__contacts li:not(:first-child, :nth-child(2)){
+    background-color: #00000000;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.main__text__contacts li:not(:first-child, :nth-child(2)):hover{
+    box-shadow: var(--color-txt1) 0px 0px 0px 1px;
+}
+
+.main__text__contacts li:nth-child(3):hover{
+    background-color: #168312;
+}
+
+.main__text__contacts li:nth-child(4):hover{
+    background-color: #ff1616;
+}
+
+.main__text__contacts li:nth-child(5):hover{
+    background-color: #8243c1;
+}
+
+.main__text__contacts li:nth-child(6):hover{
+    background-color: #0077b5;
+}
+
+.main__text__contacts li:nth-child(1){
+    background-color: var(--color-1);
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+}
+
+.main__text__contacts li:nth-child(1):hover{
+    background-color: var(--color-2);
+}
+
+.contact__icon{
+    width: 25px;
+    height: 25px;
+    filter: invert(100%);
+    transition: .3s all ease-in-out;
+}
+
+.main__img{
+    width: 60%;
+    height: 200px;
+    border-radius: 15%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: .3s all ease-in-out;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 5px solid rgba(0, 0, 0, 0);
+    box-shadow: var(--color-txt1) 0px 0px 0px 3px;
+    order: -1;
+}
+
+.main__img-file{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Typing... */
+.main__text__type {
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main__text__type p {
+font-size: 1.5rem;
+font-weight: 700;
+}
+
+.main__text__type p span.typed-text {
+color: var(--color-2);
+}
+
+.main__text__type p span.cursor {
+display: inline-block;
+background-color: var(--color-txt1);
+margin-left: 0.1rem;
+width: 3px;
+animation: blink 1s infinite;
+}
+
+@keyframes blink {
+0%  { background-color: var(--color-txt1); }
+49% { background-color: var(--color-txt1); }
+50% { background-color: transparent; }
+99% { background-color: transparent; }
+100%  { background-color: var(--color-txt1); }
+}
+
+/* Seta */
+.caixa-seta{
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+    display: none;
+}
+
+.seta{
+    position: absolute;
+    padding: 20px;
+    right: calc(50vw - 30px);
+    box-shadow: 2px -2px 0 1px var(--color-txt1) inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.seta:hover{
+    box-shadow: 2px -2px 0 1px var(--color-2) inset;
+}
+
+@media screen and (min-width: 425px){
+    .main__img{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 80px 0;
+    }
+
+    .main__text{
+        width: 55%;
+        text-align: justify;
+        font-size: 1.3rem;
+    }
+
+    .main__text h2{
+        font-size: 2rem;
+    }
+    
+    .main__text h3{
+        font-size: 2.3rem;
+    }
+
+    .main__text__type p {
+    font-size: 1.5rem;
+    }
+
+    .main__text__contacts{
+        width: 90%;
+    }
+
+    .main__img{
+        width: 35%;
+        height: 250px;
+        order: 0;
+        margin-bottom: 0px;
+    }
+    
+    .main__img-file:hover{
+        filter: grayscale(100);
+    }
+    
+    .main__img:hover{
+        border: 0;
+        box-shadow: var(--color-3) 0px 0px 0px 8px;
+    }
+
+    .caixa-seta{
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .main__img{
+        width: 30%;
+        height: 300px;
+    }
+
+    .main__text h2{
+        font-size: 2.8rem;
+    }
+    
+    .main__text h3{
+        font-size: 3.3rem;
+    }
+    
+    .main__text__type p {
+    font-size: 2.5rem;
+    }
+}
